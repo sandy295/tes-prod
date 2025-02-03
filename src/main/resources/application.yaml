@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: model-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/modeldb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  servlet:
+    multipart:
+      enabled: true
+#	  springdoc.show-actuator=tru
+      max-request-size:
+        100MB
+      max-file-size:
+        100MB
+#		sprg.servlet.multipart.max-file-size=50MB
+#		spring.servlet.multipart.max-request-size=50MB
+model:
+   id : 52
+#springdoc:
+#  show-actuator: true
