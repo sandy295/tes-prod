@@ -15,21 +15,21 @@ spring:
   servlet:
     multipart:
       enabled: true
-#	  springdoc.show-actuator=tru
+#   springdoc.show-actuator=tru
       max-request-size:
         100MB
       max-file-size:
         100MB
-  cache:
-    type: redis
-    redis:
-      time-to-live: 60000
-  data:
-    redis:
-      host: localhost
-      port: 6379
-#		sprg.servlet.multipart.max-file-size=50MB
-#		spring.servlet.multipart.max-request-size=50MB
+#  cache:
+#    type: redis
+#    redis:
+#      time-to-live: 60000
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+#   sprg.servlet.multipart.max-file-size=50MB
+#   spring.servlet.multipart.max-request-size=50MB
 model:
    id : 52
 #springdoc:

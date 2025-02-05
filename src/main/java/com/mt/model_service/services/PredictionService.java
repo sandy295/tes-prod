@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mt.model_service.component.DateComponent;
 import com.mt.model_service.container.OnnxModels;
 
@@ -51,12 +50,12 @@ public class PredictionService {
 	    }
 	    
 	    public Object predictQuantity(String inputDate , String resourceName ,int noofDate) throws OrtException, JsonProcessingException{
-	        float[][] inputs1 = {
-	        		{3,2024,6},
-	        		{3,2024,9},
-	        		{3,2024,12},
-	        		{3,2025,6}
-	        };
+//	        float[][] inputs1 = {
+//	        		{3,2024,6},
+//	        		{3,2024,9},
+//	        		{3,2024,12},
+//	        		{3,2025,6}
+//	        };
 	    	float[][] inputs = new float[noofDate][3]; 
 	    	List<String> dates = dateComponent.getDates(inputDate, noofDate);
 	    	for(int i = 0 ; i < noofDate ;i++) {

@@ -1,20 +1,20 @@
 package com.mt.model_service.model;
 
-import jakarta.persistence.Column;
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+@SuppressWarnings("serial")
 @Entity
 @Data
-public class Analaysis {
+public class Product implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String analysis_type;
-	@Column(columnDefinition = "json")
-	private String analysis_data;
-	private String filter;	
+	private String name;
+	private Long departmentId;
 }
